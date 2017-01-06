@@ -1,0 +1,15 @@
+{% extends 'views/layout.twig' %}
+
+{% block body %}
+<div class="full-page vertical-center" id="list">
+  {% for record in records %}
+  <article>
+    <h2><a href="{{ record.link }}">{{ record.title }}</a></h2>
+  </article>
+  {% else %}
+  <div>
+    No records found.
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

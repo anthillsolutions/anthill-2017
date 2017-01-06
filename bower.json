@@ -1,0 +1,20 @@
+{
+  "name": "anthill-2017",
+  "description": "anthillsolutions website frontend",
+  "main": "index.js",
+  "authors": [
+    "anthillsolutions"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

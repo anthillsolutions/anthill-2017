@@ -1,0 +1,10 @@
+{% extends 'views/layout.twig' %}
+
+{% block body %}
+<div class="full-page vertical-center" id="article">
+  <h1>{{ record.title }}</h1>
+  <div class="body">
+    {{ record.text | markdown }}
+  </div>
+</div>
+{% endblock %}

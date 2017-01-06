@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'MarkPro';
+  src: url('../fonts/MarkPro.otf') format('opentype');
+}
+
+body {
+  font-weight: 300;
+  font-family: 'MarkPro', arial, sans-serif;
+  padding-top: 70px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 300;
+  span {
+    font-weight: 600;
+  }
+}
+
+nav {
+  img {
+    height: 40px;
+  }
+}
+
+.navbar-brand {
+  padding: 5px 15px;
+}
+
+#home {
+  img {
+    width: 100%;
+  }
+}
+
+.subtitle {
+  text-align: center;
+}
