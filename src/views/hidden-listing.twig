@@ -4,6 +4,20 @@
 <div class="container" id="base">
   <h1>Base</h1>
   {% if user.id is defined %}
+  {% setcontent left = 'partials/base-left-box' %}
+  {% setcontent right = 'partials/base-right-box' %}
+  <div class="row">
+    {% if left.body is defined %}
+    <div class="col-sm-6 box-blue">
+      {{ left.body }}
+    </div>
+    {% endif %}
+    {% if right.body is defined %}
+    <div class="col-sm-6 box-blue">
+      {{ right.body }}
+    </div>
+    {% endif %}
+  </div>
   {% include 'views/partials/listing.twig' %}
   {% else %}
   <p>No articles in base are available for you.</p>

@@ -16,6 +16,10 @@
   </li>
 </ol>
 <div class="body">
-  {{ record.teaser | markdown }}
-  {{ record.body | markdown }}
+  <div class="teaser">
+    {{ record.teaser | markdown }}
+  </div>
+  <div>
+    {{ record.body | markdown }}
+  </div>
 </div>

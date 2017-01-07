@@ -53,12 +53,28 @@ article {
   border-bottom: solid lightgrey 1px;
 }
 
+.teaser {
+  font-style: italic;
+}
+
 .row h1 {
   display: block;
 }
 
 .row .date {
   padding-top: 40px;
+}
+
+.box-blue {
+  padding: 10px;
+  margin: 10px 15px;
+  border: solid 1px steelblue;
+  border-radius: 10px;
+}
+
+.box-blue h3 {
+  margin-top: 0;
+  color: lightslategrey;
 }
 
 footer {
