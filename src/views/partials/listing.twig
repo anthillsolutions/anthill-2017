@@ -1,7 +1,19 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/">
+      Home
+    </a>
+  </li>
+  {% if records[1] is defined %}
+  <li class="breadcrumb-item active">
+    {{records[1].contenttype.name}}
+  </li>
+  {% endif %}
+</ol>
 {% for record in records %}
 <article>
   <h2><a href="{{ record.link }}">{{ record.title }}</a></h2>
-  <span>{{ record.datepublish |date("jS F Y") }}</span>
+  <span>{{ record.datepublish | date("jS F Y") }}</span>
   {% if record.teaser is defined %}
   <p>
     {{ record.teaser }}

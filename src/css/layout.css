@@ -49,8 +49,16 @@ nav img {
 }
 
 article {
-  padding: 0 20px;
+  padding: 20px 0;
   border-bottom: solid lightgrey 1px;
+}
+
+.row h1 {
+  display: block;
+}
+
+.row .date {
+  padding-top: 40px;
 }
 
 footer {
