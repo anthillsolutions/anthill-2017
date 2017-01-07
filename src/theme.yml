@@ -1,3 +1,2 @@
 homepage_template: views/home.twig
-listing_template: views/listing.twig
 notfound: views/error404.twig

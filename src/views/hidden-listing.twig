@@ -2,7 +2,11 @@
 
 {% block body %}
 <div class="container" id="base">
-  <h1>Articles</h1>
+  <h1>Base</h1>
+  {% if user.id is defined %}
   {% include 'views/partials/listing.twig' %}
+  {% else %}
+  <p>No articles in base are available for you.</p>
+  {% endif %}
 </div>
 {% endblock %}

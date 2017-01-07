@@ -2,6 +2,10 @@
 
 {% block body %}
 <div class="container" id="article">
+  {% if user.id is defined %}
   {% include 'views/partials/article.twig' %}
+  {% else %}
+  <h1>Article unavailable</h1>
+  {% endif %}
 </div>
 {% endblock %}

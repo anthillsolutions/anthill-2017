@@ -1,0 +1,17 @@
+{% for record in records %}
+<article>
+  <h2><a href="{{ record.link }}">{{ record.title }}</a></h2>
+  <span>{{ record.datepublish |date("jS F Y") }}</span>
+  {% if record.teaser is defined %}
+  <p>
+    {{ record.teaser }}
+  </p>
+  {% endif %}
+</article>
+{% else %}
+<div>
+  No records found.
+</div>
+{% endfor %}
+<div>
+</div>

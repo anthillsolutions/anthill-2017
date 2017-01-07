@@ -89,7 +89,10 @@ gulp.task('html', ['styles'], () => {
  * Move theme.yml file to dest
  */
 gulp.task('theme', () => {
-  return gulp.src('src/theme.yml')
+  return gulp.src([
+    'src/theme.yml',
+    'src/favicon.png',
+  ])
     .pipe(gulp.dest(DEST));
 });
 

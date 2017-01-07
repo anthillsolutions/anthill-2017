@@ -1,12 +1,15 @@
 {% extends 'views/layout.twig' %}
 
 {% block menu %}
+{% if user.id is defined %}
 {{ menu('main', 'views/menus/home.twig') }}
+{% endif %}
 {% endblock %}
 
 {% block body %}
-<div class="full-page vertical-center" id="home">
-  <img src="{{paths.theme}}images/logo.png" alt="anthillsolutions" title="anthillsolutions" />
-  <h1>anthill<span>solutions</span></h1>
+<div class="container full-page" id="home">
+  <div class="vertical-align">
+    <img src="{{paths.theme}}images/logo.jpg" alt="anthillsolutions" title="anthillsolutions" />
+  </div>
 </div>
 {% endblock %}

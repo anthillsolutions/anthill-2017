@@ -3,15 +3,30 @@
   src: url('../fonts/MarkPro.otf') format('opentype');
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-weight: 300;
   font-family: 'MarkPro', arial, sans-serif;
+}
+
+body > .container {
   padding-top: 70px;
+  min-height: 100%;
+}
+
+.full-page {
+  height: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 300;
+  color: darkslategrey;
 }
 
 h1 {
-  text-align: center;
-  font-weight: 300;
   span {
     font-weight: 600;
   }
@@ -21,6 +36,12 @@ nav {
   img {
     height: 40px;
   }
+}
+
+.navbar-transparent {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
 }
 
 .navbar-brand {
@@ -33,6 +54,27 @@ nav {
   }
 }
 
+article {
+  padding: 0 20px;
+  border-bottom: solid lightgrey 1px;
+}
+
+footer {
+  margin-top: -50px;
+  p {
+    text-align: center;
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
 .subtitle {
   text-align: center;
+}
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }

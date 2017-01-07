@@ -1,0 +1,7 @@
+<h1>{{ record.title }}</h1>
+<span>{{ record.datepublish }}</span>
+<div class="body">
+  {{ dump(record) }}
+  {{ record.teaser | markdown }}
+  {{ record.body | markdown }}
+</div>

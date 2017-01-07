@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-main" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -12,13 +12,21 @@
       </a>
     </div>
 
-    <div class="collapse navbar-collapse" id="menu-main">
+    <div class="collapse navbar-collapse navbar-right" id="menu-main">
       <ul class="nav navbar-nav">
         {% for item in menu %}
         <li>
           <a href="{{ item.link }}">{{ item.label }}</a>
         </li>
         {% endfor %}
+        {% if user.id is defined %}
+        <li>
+          <a href="/base">Base</a>
+        </li>
+        <li>
+          <a href="/bolt">Console</a>
+        </li>
+        {% endif %}
       </ul>
     </div>
   </div>
