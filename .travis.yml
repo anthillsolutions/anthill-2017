@@ -1,4 +1,7 @@
 sudo: true
 language: node_js
 node_js:
-  - "7.2"
+- '7.2'
+notifications:
+  slack:
+    secure: ewGRfeFZENqXWq0bYtM7G8pZSKcGhyZeCbQR5yxi3boxiQZkbB2k/CHO43TuVlMTjlYFhM7mGauVOGx8jcLhvx07Iniu2MobXkV8Eis4gX0er7v1Ty1TvZnd5xvMVvhkJxJm+CTOPxBaFU7XKYszfBdCW5Q70NUMdgZH30rxbipYc1Uf2gz8c7rW7YOE4qt+2jzH2/w/QbxI+k8sd7olEhxz+441AfEbEzqIr3eor6+DUsS/Pa0McSTKBdLlW1aqHhMriUX4toiRna9oO607dpzktTIe9nNJbr/PQ3FnzPLBIGZR/uBJFF4I+PwqpL2jyDm7DF6r/55grOPj7hq9hlszEKQDdCnSm+MrX2tpIlVjvC6Fo3jz/Ng57n+KdsxV9BptCiwNmgMFS0lP7TuHl95DJN5ODsj+4HQiXhytbHXEK0vBHruPEziXf1eV8RzCzGdofKHTKV2M0WMWJEhg3Mkb/DJFY085Yluz7j2jr3Kp4CrpUEk6EfirdHJeuSYvhMmNjfc1yrOmoEWmaLzJX0ib//aKbz1N2NxZg4wEcMCs/ZzgpdD4CZMoxzDv0OFtxCXFnVWjqIewHQOzd4H6QXbhdZUW6BJacHL7RqE+NJ7+trdJatXqAPJQGOF++38HE4TEd4z0DTKaFtyCqV38AjmhG/SISOYHAHFtbQRnRHc=
