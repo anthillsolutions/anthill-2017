@@ -123,6 +123,14 @@ gulp.task('watch', ['default'], () => {
 });
 
 /**
+ * Task test
+ * Build the project and test for it's consistency
+ */
+gulp.task('test', ['default'], () => {
+  console.log('It works!');
+});
+
+/**
  * Task default
  * Apply all tasks to build project
  */
