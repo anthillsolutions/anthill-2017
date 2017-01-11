@@ -11,6 +11,8 @@ An anthill**solutions** [Bolt CMS](https://bolt.cm) theme.
 Install
 -------
 
+Requires: Bolt CMS installed.
+ 
 ```bash
 $ npm install
 $ gulp
