@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "highlightjs": "^9.9.0"
+    "highlightjs": "^9.9.0",
+    "font-awesome": "^4.7.0"
   }
 }

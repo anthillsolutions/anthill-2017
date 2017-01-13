@@ -1,7 +1,15 @@
 {% extends 'views/layout.twig' %}
 
+{% block header %}
+{% if record.image is defined %}
+<header style="background-image: url('/files/{{ record.image }}')">
+  {{ menu('main', 'views/menus/everywhere.twig') }}
+</header>
+{% endif %}
+{% endblock header %}
+
 {% block body %}
 <div class="container" id="article">
   {% include 'views/partials/article.twig' %}
 </div>
-{% endblock %}
+{% endblock body %}

@@ -14,6 +14,16 @@
 <article>
   <h2><a href="{{ record.link }}">{{ record.title }}</a></h2>
   <span>{{ record.datepublish | date("jS F Y") }}</span>
+  {% if record.taxonomy is defined %}
+    - 
+    {% for type, values in record.taxonomy %}
+        <em>{{ type }}:</em>
+        {% for link, value in values %}
+                <a href="{{ link }}">{{ value }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+        {% if not loop.last %} - {% endif %}
+    {% endfor %}
+  {% endif %}
   {% if record.teaser is defined %}
   <p>
     {{ record.teaser }}

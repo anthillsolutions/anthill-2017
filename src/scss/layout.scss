@@ -5,6 +5,7 @@
 
 html, body {
   height: 100%;
+  font-size: 18px;
 }
 
 body {
@@ -33,6 +34,25 @@ h1 {
   }
 }
 
+header {
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  @media (min-width: 320px) {
+    height: 45vh;
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    height: 60vh;
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200) {
+    height: 65vh;
+  }
+}
+
 nav {
   img {
     height: 40px;
@@ -43,6 +63,11 @@ nav {
    background-color: transparent;
    background: transparent;
    border-color: transparent;
+}
+
+.navbar-tinted {
+  background-color: rgba(255,255,255,0.8);
+  border-color: rgba(255,255,255,0.8);
 }
 
 .navbar-brand {
@@ -80,6 +105,34 @@ article {
   h3 {
     margin-top: 0;
     color: lightslategrey;
+  }
+}
+
+.user {
+  position: relative;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: solid 1px lightgrey;
+  .author,
+  h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: darkslategrey;
+  }
+}
+
+.social {
+  a {
+    color: silver;
+  }
+  .fa-facebook:hover {
+    color: rgb(59, 89, 152);
+  }
+  .fa-twitter:hover {
+    color: rgb(50,106,218);
+  }
+  .fa-linkedin:hover {
+    color: rgb(0,119,181);
   }
 }
 

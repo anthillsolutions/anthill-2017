@@ -23,3 +23,22 @@
     {{ record.body | markdown }}
   </div>
 </div>
+<div class="user row">
+  <div class="col-md-6">
+    <a href="{{ profile_link(record.user) }}" class="author">{{record.user.fullname}}</a>
+  </div>
+  <div class="col-md-6">
+    <h4 class="pull-right">Share</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-6">
+    <div class="social pull-right">
+      <a href="https://facebook.com">
+        <i class="fa fa-2x fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com"><i class="fa fa-2x fa-twitter"></i></a>
+      <a href="https://linkedin.com"><i class="fa fa-2x fa-linkedin"></i></a>
+    </div>
+  </div>
+</div>

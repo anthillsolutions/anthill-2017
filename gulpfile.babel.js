@@ -38,7 +38,10 @@ gulp.task('jscs', () => {
  * Move fonts to DEST
  */
 gulp.task('fonts', () => {
-  return gulp.src('src/fonts/*')
+  return gulp.src([
+      'src/fonts/*',
+      'src/lib/font-awesome/fonts/*',
+    ])
     .pipe(gulp.dest(DEST + '/fonts'));
 });
 

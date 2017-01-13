@@ -12,20 +12,21 @@
     <!-- build:css css/bundle.css -->
     <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../lib/highlightjs/styles/github.css">
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/layout.css">
     <!-- endbuild -->
   </head>
 
   <body>
-    {% block menu %}
+    {% block header %}
     {{ menu('main', 'views/menus/everywhere.twig') }}
-    {% endblock %}
+    {% endblock header %}
     {% block body %}
     {% endblock body %}
     <footer class="footer">
       <p>
         © 2014 - 2017 anthill<span>solutions</span> •
-        <a href="mailto:info@anthillsolutions.ch">contact<i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <a href="mailto:info@anthillsolutions.ch">contact <i class="fa fa-envelope-o" aria-hidden="true"></i>
       </p>
     </footer>
     <!-- build:js js/bundle.js -->

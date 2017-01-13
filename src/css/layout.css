@@ -5,6 +5,7 @@
 
 html, body {
   height: 100%;
+  font-size: 18px;
 }
 
 body {
@@ -31,6 +32,32 @@ h1 span {
   font-weight: 600;
 }
 
+header {
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  /* Medium devices (desktops, 992px and up) */
+  /* Large devices (large desktops, 1200px and up) */
+}
+
+@media (min-width: 320px) {
+  header {
+    height: 45vh;
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    height: 60vh;
+  }
+}
+
+@media (min-width: 1200) {
+  header {
+    height: 65vh;
+  }
+}
+
 nav img {
   height: 40px;
 }
@@ -39,6 +66,11 @@ nav img {
   background-color: transparent;
   background: transparent;
   border-color: transparent;
+}
+
+.navbar-tinted {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 .navbar-brand {
@@ -76,6 +108,36 @@ article {
 .box-blue h3 {
   margin-top: 0;
   color: lightslategrey;
+}
+
+.user {
+  position: relative;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: solid 1px lightgrey;
+}
+
+.user .author,
+.user h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: darkslategrey;
+}
+
+.social a {
+  color: silver;
+}
+
+.social .fa-facebook:hover {
+  color: #3b5998;
+}
+
+.social .fa-twitter:hover {
+  color: #326ada;
+}
+
+.social .fa-linkedin:hover {
+  color: #0077b5;
 }
 
 footer {
