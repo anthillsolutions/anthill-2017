@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="anthillsolutions, anthill, solutions, wsn, wireless sensor networks, wireless, sensor, networks">
+    {% block description %}
     <meta name="description" content="anthillsolutions website">
+    {% endblock description %}
     <meta name="author" content="anthillsolutions">
+    {% block title %}
     <title>{{ app.config.get('general/sitename') }}</title>
+    {% endblock title %}
     <link rel="icon" href="{{paths.theme}}/favicon.png">
     <!-- build:css css/bundle.css -->
     <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.min.css">
