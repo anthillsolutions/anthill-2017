@@ -1,5 +1,27 @@
 {% extends 'views/layout.twig' %}
 
+{% block title %}
+<title>{{ record.title }}</title>
+{% endblock title %}
+
+{% block description %}
+{% if record.teaser is defined %}
+<meta name="description" content="{{ record.teaser }}">
+{% endif %}
+{% endblock description %}
+
+{% block header %}
+{% if record.image %}
+<header style="background-image: url('/files/{{ record.image }}')" class="image">
+  {{ menu('main', 'views/menus/everywhere.twig') }}
+</header>
+{% else %}
+<header>
+  {{ menu('main', 'views/menus/everywhere.twig') }}
+</header>
+{% endif %}
+{% endblock header %}
+
 {% block body %}
 <div class="container" id="article">
   {% if user.id is defined %}
