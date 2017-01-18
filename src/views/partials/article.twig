@@ -34,11 +34,10 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-6">
     <div class="social pull-right">
-      <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=&amp;src=sdkpreparse">
-        <i class="fa fa-2x fa-facebook"></i>
-      </a>
-      <a href="https://twitter.com"><i class="fa fa-2x fa-twitter"></i></a>
-      <a href="https://linkedin.com"><i class="fa fa-2x fa-linkedin"></i></a>
+      <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{paths.currenturl | url_encode}}&amp;src=sdkpreparse"><i class="fa fa-2x fa-facebook"></i></a>
+      <a target="_blank" href="https://www.twitter.com/share?text={{record.title}}&amp;url={{paths.currenturl | url_encode}}
+"><i class="fa fa-2x fa-twitter"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/cws/share?url={{paths.currenturl | url_encode}}"><i class="fa fa-2x fa-linkedin"></i></a>
     </div>
   </div>
 </div>
