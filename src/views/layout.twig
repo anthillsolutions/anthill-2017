@@ -23,7 +23,9 @@
 
   <body>
     {% block header %}
-    {{ menu('main', 'views/menus/everywhere.twig') }}
+    <header>
+      {{ menu('main', 'views/menus/everywhere.twig') }}
+    </header>
     {% endblock header %}
     {% block body %}
     {% endblock body %}

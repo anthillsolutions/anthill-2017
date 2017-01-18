@@ -12,11 +12,13 @@
 
 {% block header %}
 {% if record.image %}
-<header style="background-image: url('/files/{{ record.image }}')">
+<header style="background-image: url('/files/{{ record.image }}')" class="image">
   {{ menu('main', 'views/menus/everywhere.twig') }}
 </header>
 {% else %}
+<header>
   {{ menu('main', 'views/menus/everywhere.twig') }}
+</header>
 {% endif %}
 {% endblock header %}
 

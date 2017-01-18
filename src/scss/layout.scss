@@ -14,7 +14,6 @@ body {
 }
 
 body > .container {
-  padding-top: 70px;
   padding-bottom: 70px;
   min-height: 100%;
 }
@@ -35,21 +34,25 @@ h1 {
 }
 
 header {
+  min-height: 70px;
+}
+
+header.image {
   height: 30vh;
   background-position: center;
   background-size: cover;
   @media (min-width: 320px) {
-    height: 45vh;
+    height: 30vh;
   }
 
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
-    height: 60vh;
+    height: 45vh;
   }
 
   /* Large devices (large desktops, 1200px and up) */
   @media (min-width: 1200) {
-    height: 65vh;
+    height: 50vh;
   }
 }
 
@@ -66,8 +69,8 @@ nav {
 }
 
 .navbar-tinted {
-  background-color: rgba(255,255,255,0.8);
-  border-color: rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.9);
+  border-color: rgba(255,255,255,0.9);
 }
 
 .navbar-brand {

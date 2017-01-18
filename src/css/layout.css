@@ -14,7 +14,6 @@ body {
 }
 
 body > .container {
-  padding-top: 70px;
   padding-bottom: 70px;
   min-height: 100%;
 }
@@ -33,6 +32,10 @@ h1 span {
 }
 
 header {
+  min-height: 70px;
+}
+
+header.image {
   height: 30vh;
   background-position: center;
   background-size: cover;
@@ -41,20 +44,20 @@ header {
 }
 
 @media (min-width: 320px) {
-  header {
-    height: 45vh;
+  header.image {
+    height: 30vh;
   }
 }
 
 @media (min-width: 992px) {
-  header {
-    height: 60vh;
+  header.image {
+    height: 45vh;
   }
 }
 
 @media (min-width: 1200) {
-  header {
-    height: 65vh;
+  header.image {
+    height: 50vh;
   }
 }
 
@@ -69,8 +72,8 @@ nav img {
 }
 
 .navbar-tinted {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
 }
 
 .navbar-brand {
