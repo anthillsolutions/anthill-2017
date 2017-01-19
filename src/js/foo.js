@@ -1,3 +1,3 @@
 'use strict';
 
-console.log('ssk');
+console.log('Default script.');

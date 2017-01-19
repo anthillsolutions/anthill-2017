@@ -3,9 +3,11 @@
 import gulp from 'gulp';
 import del from 'del';
 import gulpLoadPlugins from 'gulp-load-plugins';
+import browserSync from 'browser-sync';
 
 const $ = gulpLoadPlugins();
 const DEST = 'dist';
+browserSync.create();
 
 /**
  * Task jshint
@@ -111,17 +113,29 @@ gulp.task('clean', () => {
 });
 
 /**
- * Task watch
- * Launch task default each time a file is modified
+ * Task watch-html
+ * Listen to html task and reload the browser
  */
-gulp.task('watch', ['default'], () => {
+gulp.task('watch-html', ['html'], () => {
+  return browserSync.reload();
+});
+
+/**
+ * Task serve
+ * Launch an instance of the server and listen to
+ * every change reloading the browser
+ */
+gulp.task('serve', ['html'], () => {
+  browserSync.init({
+    proxy: $.util.PROXY || 'http://localhost:10000'
+  });
   $.watch([
     'src/scss/*.scss',
     'src/views/*.twig',
     'src/views/**/*.twig',
     'src/js/*.js',
   ], $.batch((events, done) => {
-    gulp.start('default', done);
+    gulp.start('watch-html', done);
   }));
 });
 
@@ -131,6 +145,14 @@ gulp.task('watch', ['default'], () => {
  */
 gulp.task('test', ['default'], () => {
   console.log('It works!');
+});
+
+/**
+ * Task reload
+ * reload the browser after executing default
+ */
+gulp.task('reload', ['default'], () => {
+  browserSync.reload();
 });
 
 /**

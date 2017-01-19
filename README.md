@@ -12,10 +12,25 @@ Install
 -------
 
 Requires: Bolt CMS installed.
- 
+
 ```bash
 $ npm install
 $ gulp
+```
+
+Contribution
+------------
+
+All contributions are welcomed. You can edit the code while seeing the change with this command:
+
+```
+$ gulp serve
+```
+
+By default, it will connect to the server at the address `http://localhost:10000`. If you want to plug to another address, you can do:
+
+```
+$ PROXY="http://localhost:8912" gulp serve
 ```
 
 Authors
