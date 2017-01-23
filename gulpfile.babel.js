@@ -19,7 +19,8 @@ gulp.task('jshint', () => {
     'gulfile.js',
   ])
     .pipe($.jshint('.jshintrc'))
-    .pipe($.jshint.reporter('default'));
+    .pipe($.jshint.reporter('default'))
+    .pipe($.jshint.reporter('fail'));
 });
 
 /**
@@ -32,7 +33,8 @@ gulp.task('jscs', () => {
     'gulfile.js',
   ])
     .pipe($.jscs('.jscsrc'))
-    .pipe($.jscs.reporter());
+    .pipe($.jscs.reporter())
+    .pipe($.jscs.reporter('fail'));
 });
 
 /**
@@ -143,8 +145,10 @@ gulp.task('serve', ['html'], () => {
  * Task test
  * Build the project and test for it's consistency
  */
-gulp.task('test', ['default'], () => {
-  console.log('It works!');
+gulp.task('test', () => {
+  return $.runSequence(
+    'jshint',
+    'jscs');
 });
 
 /**
