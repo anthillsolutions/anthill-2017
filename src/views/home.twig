@@ -1,15 +1,22 @@
 {% extends 'views/layout.twig' %}
 
 {% block header %}
-{% if user.id is defined %}
+{% if user.id is not defined %}
 {{ menu('main', 'views/menus/home.twig') }}
 {% endif %}
 {% endblock header %}
 
 {% block body %}
-<div class="container full-page" id="home">
-  <div class="vertical-align">
-    <img src="{{paths.theme}}images/logo.jpg" alt="anthillsolutions" title="anthillsolutions" />
+<section class="full-page" id="index">
+  <div class="container">
+    <img src="{{paths.theme}}images/logo_original.png" alt="anthillsolutions" title="anthillsolutions" />
+    <h1>
+      towards <span>solutions</span> together
+    </h1>
+    <p>
+      Managing micro services around the world and using geo-data bringing
+      people into advanced solutions.
+    </p>
   </div>
-</div>
+</section>
 {% endblock body %}

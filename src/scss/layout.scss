@@ -3,6 +3,8 @@
   src: url('../fonts/MarkPro.otf') format('opentype');
 }
 
+$anthill-grey: rgb(135,138,139);
+
 html, body {
   height: 100%;
   font-size: 18px;
@@ -22,9 +24,56 @@ body > .container {
   height: 100%;
 }
 
+#index {
+  h1 {
+    span {
+      color: $anthill_grey;
+    }
+  }
+  @media (max-width: 991px) {
+    img {
+      width: 80%;
+      margin: 20vh 10% 2vh 10%;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2vh;
+      span {
+        display: block;
+      }
+    }
+    p {
+      display: block;
+      width: 100%;
+      text-align: justify;
+    }
+  }
+  @media (min-width: 768px) {
+    p {
+      width: 60%;
+      margin-left: 20%;
+    }
+  }
+
+  @media (min-width: 992px) {
+    img {
+      margin-top: 40%;
+    }
+    h1 {
+      width: 479px;
+      text-align: center;
+    }
+    p {
+      width: 479px;
+      margin-left: 0;
+      text-align: justify;
+    }
+  }
+}
+
 h1, h2, h3, h4 {
   font-weight: 300;
-  color: darkslategrey;
+  color: rgb(85,85,95);
 }
 
 h1 {
@@ -38,25 +87,26 @@ header {
 }
 
 header.image {
-  height: 30vh;
+  height: 10vh;
   background-position: center;
   background-size: cover;
   @media (min-width: 320px) {
-    height: 30vh;
+    height: 20vh;
   }
 
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
-    height: 45vh;
+    height: 30vh;
   }
 
   /* Large devices (large desktops, 1200px and up) */
   @media (min-width: 1200) {
-    height: 50vh;
+    height: 35vh;
   }
 }
 
 nav {
+  margin-top: 20px;
   img {
     height: 40px;
   }

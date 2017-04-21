@@ -22,9 +22,54 @@ body > .container {
   height: 100%;
 }
 
+#index h1 span {
+  color: #878a8b;
+}
+
+@media (max-width: 991px) {
+  #index img {
+    width: 80%;
+    margin: 20vh 10% 2vh 10%;
+  }
+  #index h1 {
+    text-align: center;
+    margin-bottom: 2vh;
+  }
+  #index h1 span {
+    display: block;
+  }
+  #index p {
+    display: block;
+    width: 100%;
+    text-align: justify;
+  }
+}
+
+@media (min-width: 768px) {
+  #index p {
+    width: 60%;
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 992px) {
+  #index img {
+    margin-top: 40%;
+  }
+  #index h1 {
+    width: 479px;
+    text-align: center;
+  }
+  #index p {
+    width: 479px;
+    margin-left: 0;
+    text-align: justify;
+  }
+}
+
 h1, h2, h3, h4 {
   font-weight: 300;
-  color: darkslategrey;
+  color: #55555f;
 }
 
 h1 span {
@@ -36,7 +81,7 @@ header {
 }
 
 header.image {
-  height: 30vh;
+  height: 10vh;
   background-position: center;
   background-size: cover;
   /* Medium devices (desktops, 992px and up) */
@@ -45,20 +90,24 @@ header.image {
 
 @media (min-width: 320px) {
   header.image {
-    height: 30vh;
+    height: 20vh;
   }
 }
 
 @media (min-width: 992px) {
   header.image {
-    height: 45vh;
+    height: 30vh;
   }
 }
 
 @media (min-width: 1200) {
   header.image {
-    height: 50vh;
+    height: 35vh;
   }
+}
+
+nav {
+  margin-top: 20px;
 }
 
 nav img {
