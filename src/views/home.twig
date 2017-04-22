@@ -1,9 +1,7 @@
 {% extends 'views/layout.twig' %}
 
 {% block header %}
-{% if user.id is not defined %}
 {{ menu('main', 'views/menus/home.twig') }}
-{% endif %}
 {% endblock header %}
 
 {% block body %}
@@ -18,5 +16,11 @@
       people into advanced solutions.
     </p>
   </div>
+</section>
+<section id="about">
+  <h1>About</h1>
+</section>
+<section id="contact">
+  <h1>Contact</h1>
 </section>
 {% endblock body %}
