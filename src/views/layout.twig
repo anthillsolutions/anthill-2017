@@ -29,18 +29,25 @@
     {% endblock header %}
     {% block body %}
     {% endblock body %}
+    {% block footer %}
     <footer class="footer">
       <p>
         © 2017 anthill<span>solutions</span> •
         <a href="mailto:info@anthillsolutions.ch">contact <i class="fa fa-envelope-o" aria-hidden="true"></i>
       </p>
     </footer>
+    {% endblock footer %}
+    <script>
+      var TWIG = {};
+      TWIG.imagePath = "{{ paths.theme }}";
+    </script>
     <!-- build:js js/bundle.js -->
     <script src="../lib/jquery/dist/jquery.min.js"></script>
     <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../lib/highlightjs/highlight.pack.min.js"></script>
     <script src="../js/foo.js"></script>
     <!-- endbuild -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1N_nobTheCxRMDAhgW4LMEXvE_jmnDPs&callback=myMap"></script>
     <script>
       hljs.initHighlightingOnLoad();
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

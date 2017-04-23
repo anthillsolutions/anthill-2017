@@ -71,13 +71,31 @@ body > .container {
   }
 }
 
+#about,
+#contact {
+  padding-top: 91px;
+}
+
 #about {
   background: $anthill_grey;
-  height: 400px;
+  height: 600px;
 }
 
 #contact {
-  background: $anthill_grey;
+  background: #262F36;
+  h1,
+  h2 {
+    color: rgb(215,215,215);
+  }
+  form {
+    .input-group,
+    .form-group {
+      margin: 10px 0;
+    }
+  }
+}
+
+#map {
   height: 400px;
 }
 
@@ -116,7 +134,7 @@ header.image {
 }
 
 nav {
-  margin-top: 20px;
+  padding-top: 20px;
   img {
     height: 40px;
   }
@@ -199,7 +217,7 @@ article {
   }
 }
 
-footer {
+.footer {
   margin-top: -50px;
   p {
     text-align: center;
@@ -207,6 +225,11 @@ footer {
       font-weight: 600;
     }
   }
+}
+
+.footer-black {
+  background: black;
+  padding: 10px;
 }
 
 .subtitle {

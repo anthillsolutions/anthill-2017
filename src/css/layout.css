@@ -67,13 +67,31 @@ body > .container {
   }
 }
 
+#about,
+#contact {
+  padding-top: 91px;
+}
+
 #about {
   background: #878a8b;
-  height: 400px;
+  height: 600px;
 }
 
 #contact {
-  background: #878a8b;
+  background: #262F36;
+}
+
+#contact h1,
+#contact h2 {
+  color: #d7d7d7;
+}
+
+#contact form .input-group,
+#contact form .form-group {
+  margin: 10px 0;
+}
+
+#map {
   height: 400px;
 }
 
@@ -117,7 +135,7 @@ header.image {
 }
 
 nav {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 nav img {
@@ -202,16 +220,21 @@ article {
   color: #0077b5;
 }
 
-footer {
+.footer {
   margin-top: -50px;
 }
 
-footer p {
+.footer p {
   text-align: center;
 }
 
-footer p span {
+.footer p span {
   font-weight: 600;
+}
+
+.footer-black {
+  background: black;
+  padding: 10px;
 }
 
 .subtitle {
