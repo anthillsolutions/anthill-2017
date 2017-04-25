@@ -1,0 +1,74 @@
+@import '_colors';
+
+#team {
+  padding-bottom: 5vh;
+  h1 {
+    text-align: center;
+  }
+  h1:after {
+    height: 4px;
+    display: block;
+    width: 100px;
+    margin: 5px auto;
+    background: $anthill-blue;
+    content: '';
+  }
+  .card {
+    margin: 20px;
+    padding: 5px;
+    border-bottom: solid 4px gold;
+    img {
+      border-radius: 50%;
+      max-width: 100%;
+    }
+    h2 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  .chevron {
+    position: absolute;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 6px;
+    margin-top: 30%;
+    height: 400px;
+    width: 100%;
+    z-index: -1;
+    @media (min-width: 992px) {
+      height: 400px;
+      margin-top: 20%;
+    }
+  }
+
+  .chevron:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $grey-light;
+    -webkit-transform: skew(0deg, 6deg);
+    -moz-transform: skew(0deg, 6deg);
+    -ms-transform: skew(0deg, 6deg);
+    -o-transform: skew(0deg, 6deg);
+    transform: skew(0deg, 6deg);
+  }
+  .chevron:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: $grey-superlight;
+    -webkit-transform: skew(0deg, -6deg);
+    -moz-transform: skew(0deg, -6deg);
+    -ms-transform: skew(0deg, -6deg);
+    -o-transform: skew(0deg, -6deg);
+    transform: skew(0deg, -6deg);
+  }
+}

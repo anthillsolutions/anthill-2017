@@ -46,52 +46,5 @@
 {% endblock body %}
 
 {% block footer %}
-<footer class="footer-black">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <img src="{{paths.theme}}images/logo_200x79.png" alt="anthillsolutions" title="anthillsolutions" />
-        <p>
-          Towards <span>solutions</span> together
-        </p>
-        <p>
-          <a href="mailto:info@anthillsolutions.ch">info@anthillsolutions.ch</a>
-        </p>
-      </div>
-      <div class="col-xs-12 col-sm-2">
-        <h4>Solutions</h4>
-        <ul class="list-unstyled">
-          <li>
-            <a href="#">micro-services</a>
-          </li>
-          <li>
-            <a href="#">application design</a>
-          </li>
-          <li>
-            <a href="#">website design</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-sm-2">
-        <h4>Projects</h4>
-        <ul class="list-unstyled">
-          <li>
-            <a href="#">nutrient</a>
-          </li>
-          <li>
-            <a href="#">geo-wiki</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-sm-2">
-        <h4>Company</h4>
-        <ul class="list-unstyled">
-          <li>
-            <a href="#">Team</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
+  {% include('views/partials/footer.twig') %}
 {% endblock footer %}
