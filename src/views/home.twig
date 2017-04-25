@@ -6,6 +6,8 @@
 
 {% block body %}
 <section class="full-page" id="index">
+  <div id ="chevron">
+  </div>
   <div class="container">
     <img src="{{paths.theme}}images/logo_original.png" alt="anthillsolutions" title="anthillsolutions" />
     <h1>
@@ -17,14 +19,9 @@
     </p>
   </div>
 </section>
-<section id="about">
-  <div class="container">
-    <h1>About</h1>
-    <h2>Micro-services</h2>
-    <h2>geo-data</h2>
-    <h2>Application design</h2>
-  </div>
-</section>
+
+{% include('views/partials/services.twig') %}
+
 <section id="contact">
   <div class="container">
     <h1>Contact</h1>
@@ -35,34 +32,7 @@
     </div>
     <div class="row">
       <h2>Contact form</h2>
-      <form class="col-xs-12">
-        <div class="input-group">
-          <span class="input-group-addon" id="basic-addon1">
-            <i class="fa fa-user-o fa-fw"></i>
-          </span>
-          <input type="text" class="form-control" required placeholder="Your name" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group">
-          <span class="input-group-addon" id="basic-addon1">
-            <i class="fa fa-envelope-o fa-fw"></i>
-          </span>
-          <input type="text" class="form-control" required placeholder="Your email address" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group">
-          <span class="input-group-addon" id="basic-addon1">
-            <i class="fa fa-info fa-fw" aria-hidden="true"></i>
-          </span>
-          <input type="text" class="form-control" required placeholder="Your message" aria-describedby="basic-addon1">
-        </div>
-        <div class="form-group">
-          <textarea class="form-control" rows="5" id="comment" required placeholder="Your message"></textarea>
-        </div>
-        <div class="form-group text-right">
-          <button type="submit" class="btn btn-success">
-            <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Send message
-          </button>
-        </div>
-      </form>
+      {{ boltforms('contact') }}
     </div>
     <div class="row">
       <div class="col-xs-12">

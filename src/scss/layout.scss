@@ -3,7 +3,8 @@
   src: url('../fonts/MarkPro.otf') format('opentype');
 }
 
-$anthill-grey: rgb(135,138,139);
+@import '_colors';
+@import '_mixins';
 
 html, body {
   height: 100%;
@@ -73,7 +74,7 @@ body > .container {
 
 #about,
 #contact {
-  padding-top: 91px;
+  @include padding-below-menu();
 }
 
 #about {
@@ -87,10 +88,24 @@ body > .container {
   h2 {
     color: rgb(215,215,215);
   }
+  h1 {
+    text-align: center;
+  }
+  h1:after {
+    height: 4px;
+    display: block;
+    width: 100px;
+    margin: 5px auto;
+    background: $anthill-blue;
+    content: '';
+  }
   form {
     .input-group,
     .form-group {
       margin: 10px 0;
+    }
+    textarea {
+      height: 150px;
     }
   }
 }
@@ -240,4 +255,48 @@ article {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+#chevron {
+  position: absolute;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 6px;
+  margin-top: 30%;
+  height: 40%;
+  width: 100%;
+  z-index: -1;
+  @media (min-width: 992px) {
+    height: 40%;
+    margin-top: 20%;
+  }
+}
+
+#chevron:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: $grey-light;
+  -webkit-transform: skew(0deg, 6deg);
+  -moz-transform: skew(0deg, 6deg);
+  -ms-transform: skew(0deg, 6deg);
+  -o-transform: skew(0deg, 6deg);
+  transform: skew(0deg, 6deg);
+}
+#chevron:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: $grey-superlight;
+  -webkit-transform: skew(0deg, -6deg);
+  -moz-transform: skew(0deg, -6deg);
+  -ms-transform: skew(0deg, -6deg);
+  -o-transform: skew(0deg, -6deg);
+  transform: skew(0deg, -6deg);
 }

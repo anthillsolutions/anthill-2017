@@ -86,9 +86,26 @@ body > .container {
   color: #d7d7d7;
 }
 
+#contact h1 {
+  text-align: center;
+}
+
+#contact h1:after {
+  height: 4px;
+  display: block;
+  width: 100px;
+  margin: 5px auto;
+  background: #006cb6;
+  content: '';
+}
+
 #contact form .input-group,
 #contact form .form-group {
   margin: 10px 0;
+}
+
+#contact form textarea {
+  height: 150px;
 }
 
 #map {
@@ -245,4 +262,52 @@ article {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+#chevron {
+  position: absolute;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 6px;
+  margin-top: 30%;
+  height: 40%;
+  width: 100%;
+  z-index: -1;
+}
+
+@media (min-width: 992px) {
+  #chevron {
+    height: 40%;
+    margin-top: 20%;
+  }
+}
+
+#chevron:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(245, 245, 245, 0.9);
+  -webkit-transform: skew(0deg, 6deg);
+  -moz-transform: skew(0deg, 6deg);
+  -ms-transform: skew(0deg, 6deg);
+  -o-transform: skew(0deg, 6deg);
+  transform: skew(0deg, 6deg);
+}
+
+#chevron:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(250, 250, 250, 0.9);
+  -webkit-transform: skew(0deg, -6deg);
+  -moz-transform: skew(0deg, -6deg);
+  -ms-transform: skew(0deg, -6deg);
+  -o-transform: skew(0deg, -6deg);
+  transform: skew(0deg, -6deg);
 }

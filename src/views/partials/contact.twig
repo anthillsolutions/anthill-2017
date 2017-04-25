@@ -1,0 +1,29 @@
+{{ form_start(form, { 'attr': {'class': 'col-xs-12'} } ) }}
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">
+      <i class="fa fa-user-o fa-fw"></i>
+    </span>
+    {{ form_widget(form.name, { 'attr': {'class': 'form-control'} } ) }}
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">
+      <i class="fa fa-envelope-o fa-fw"></i>
+    </span>
+    {{ form_widget(form.email, { 'attr': {'class': 'form-control'} } ) }}
+  </div>
+  <!-- <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">
+      <i class="fa fa-info fa-fw" aria-hidden="true"></i>
+    </span>
+    {{ form_widget(form.name, { 'attr': {'class': 'form-control'} } ) }}
+  </div> -->
+  <div class="form-group">
+    {{ form_widget(form.message, { 'attr': {'class': 'form-control'} } ) }}
+  </div>
+  <div class="form-group text-right">
+    <button type="submit" class="btn btn-success">
+      <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Send message
+    </button>
+    {{ form_widget(form.submit, { 'label': 'Send message', 'attr': {'class': 'btn btn-success'} }) }}
+  </div>
+{{ form_end(form) }}
