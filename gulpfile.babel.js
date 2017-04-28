@@ -98,7 +98,7 @@ gulp.task('html', ['styles'], () => {
 gulp.task('theme', () => {
   return gulp.src([
     'src/theme.yml',
-    'src/favicon.png',
+    'src/favicon.ico',
   ])
     .pipe(gulp.dest(DEST));
 });
