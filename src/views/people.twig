@@ -1,0 +1,70 @@
+{% extends 'views/layout.twig' %}
+
+{% block title %}
+<title>{{record.name}}</title>
+{% endblock title %}
+
+{% block body %}
+<section id="people">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 left">
+        <div class="frame">
+          <img src="/files/{{ record.image }}" />
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8">
+        <div class="right">
+          <div>
+            <h1>{{record.title}}</h1>
+            <p class="position">{{record.position}}</p>
+            <h2>Bio</h2>
+            {% if record.bio != "" %}
+              {{record.bio | markdown}}
+            {% else %}
+              <p class="none">
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                This team member has not been interviewed yet.
+                <i class="fa fa-quote-right" aria-hidden="true"></i>
+              </p>
+            {% endif %}
+          </div>
+          <div class="social">
+            {% if record.linkedin != "" %}
+            <a href="{{record.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a>
+            {% endif %}
+            {% if record.twitter != "" %}
+            <a href="{{record.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a>
+            {% endif %}
+            {% if record.github != "" %}
+            <a href="{{record.github}}" target="_blank"><i class="fa fa-github"></i></a>
+            {% endif %}
+            {% if record.stackoverflow != "" %}
+            <a href="{{record.stackoverflow}}" target="_blank"><i class="fa fa-stack-overflow"></i></a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="/">
+            Home
+          </a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="/{{ record.contenttype.slug }}">{{ record.contenttype.name }}</a>
+        </li>
+        <li class="breadcrumb-item active">
+          {{ record.title }}
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+{% endblock body %}
+
+{% block footer %}
+  {% include('views/partials/footer.twig') %}
+{% endblock footer %}

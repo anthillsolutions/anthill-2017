@@ -1,0 +1,39 @@
+{% extends 'views/layout.twig' %}
+
+{% block title %}
+<title>Team</title>
+{% endblock title %}
+
+{% block body %}
+<section id="team">
+  <div class="chevron">
+  </div>
+  <div class="container">
+    <h1>Team</h1>
+    <div class="row">
+      {% for record in records %}
+      {% set names = record.name|split(' ') %}
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <a href="/team/{{ record.slug }}">
+          {% if record.image %}
+          <img src="/files/{{ record.image }}" />
+          {% else %}
+          <img src="{{paths.theme}}images/unknown.png" />
+          {% endif %}
+          </a>
+          <h2>{{names[0]}}</h2>
+          <p>
+            {{record.position}}
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock body %}
+
+{% block footer %}
+  {% include('views/partials/footer.twig') %}
+{% endblock footer %}

@@ -225,16 +225,24 @@ article {
   color: silver;
 }
 
-.social .fa-facebook:hover {
+.social a:hover .fa-facebook {
   color: #3b5998;
 }
 
-.social .fa-twitter:hover {
+.social a:hover .fa-twitter {
   color: #326ada;
 }
 
-.social .fa-linkedin:hover {
+.social a:hover .fa-linkedin {
   color: #0077b5;
+}
+
+.social a:hover .fa-stack-overflow {
+  color: #F48A36;
+}
+
+.social a:hover .fa-github {
+  color: black;
 }
 
 .footer {
