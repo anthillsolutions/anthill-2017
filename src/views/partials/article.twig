@@ -25,6 +25,8 @@
 </div>
 <div class="user row">
   <div class="col-md-6">
+    {% setcontent user = 'team' where { user_link: record.user.username } %}
+    written by <a href="/team/{{user[1].values.slug}}">{{record.user.displayname}}</a>
   </div>
   <div class="col-md-6">
     <h4 class="pull-right">Share</h4>
