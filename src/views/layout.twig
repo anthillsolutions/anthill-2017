@@ -9,6 +9,8 @@
     <meta name="description" content="anthillsolutions website">
     {% endblock description %}
     <meta name="author" content="anthillsolutions">
+    {% block ogtags %}
+    {% endblock ogtags %}
     {% block title %}
     <title>{{ app.config.get('general/sitename') }}</title>
     {% endblock title %}

@@ -10,6 +10,19 @@
 {% endif %}
 {% endblock description %}
 
+{% block ogtags %}
+{% setcontent user = 'team' where { user_link: record.user.username } %}
+<meta property="og:title" content="{{ record.title }}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ paths.currenturl }}" />
+<meta property="og:article:published_time" content="{{ record.values.datepublish }}" />
+<meta property="og:article:modified_time" content="{{ record.values.datepublish }}" />
+<meta property="og:article:author" content="{{ user[1].values.name }}" />
+{% if record.image %}
+<meta property="og:image" content="{{paths.rooturl}}files/{{ record.image }}" />
+{% endif %}
+{% endblock ogtags %}
+
 {% block header %}
 {% if record.image %}
 <header style="background-image: url('/files/{{ record.image }}')" class="image">

@@ -3,7 +3,6 @@
 {% block body %}
 <div class="container" id="base">
   <h1>{{ record.fullname }}</h1>
-  {{ dump(record) }}
   {% setcontent articles = 'articles' where {ownerid: user.id} %}
   {% include 'views/partials/listing.twig' %}
 </div>
