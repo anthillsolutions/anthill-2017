@@ -9,6 +9,7 @@
 html, body {
   height: 100%;
   font-size: 18px;
+  line-height: 33px;
 }
 
 body {
@@ -181,6 +182,15 @@ article {
   border-bottom: solid lightgrey 1px;
 }
 
+#article {
+  .body {
+    img {
+      max-width: 90%;
+      margin: 10px auto;
+    }
+  }
+}
+
 .teaser {
   font-style: italic;
 }
@@ -310,4 +320,86 @@ article {
   -ms-transform: skew(0deg, -6deg);
   -o-transform: skew(0deg, -6deg);
   transform: skew(0deg, -6deg);
+}
+
+.smartphone {
+  width: 376px;
+  height: 750px;
+  position: relative;
+  background-image: url('../images/pixel.png');
+  z-index: 20;
+  img {
+    position: absolute;
+    left: 23px;
+    top: 71px;
+    width: 330px;
+    z-index: -10;
+  }
+}
+
+#geo-wiki {
+  .space-up {
+    margin: 20px 0;
+  }
+  .span-down {
+    margin-bottom: 60px;
+  }
+  .middle {
+    margin: 0 auto;
+  }
+  .half {
+    width: 50%;
+    margin: 10px auto;
+  }
+  .border {
+    background: rgb(215,155,155);
+  }
+  .vertical-align {
+    p {
+      font-size: 1.2em;
+      padding: 10px 0;
+    }
+  }
+  .chevron {
+    position: absolute;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 6px;
+    margin-top: 30%;
+    height: 400px;
+    width: 100%;
+    z-index: -1;
+    @media (min-width: 992px) {
+      height: 400px;
+      margin-top: 20%;
+    }
+  }
+  .chevron:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $grey-light;
+    -webkit-transform: skew(0deg, 6deg);
+    -moz-transform: skew(0deg, 6deg);
+    -ms-transform: skew(0deg, 6deg);
+    -o-transform: skew(0deg, 6deg);
+    transform: skew(0deg, 6deg);
+  }
+  .chevron:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: $grey-superlight;
+    -webkit-transform: skew(0deg, -6deg);
+    -moz-transform: skew(0deg, -6deg);
+    -ms-transform: skew(0deg, -6deg);
+    -o-transform: skew(0deg, -6deg);
+    transform: skew(0deg, -6deg);
+  }
 }
